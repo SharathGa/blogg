@@ -3,9 +3,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse("<h1> Blog Home </h1>")
+    return render(request, "web_blog/home.html")
+
+
+# views always need to return a httpresponse or an exception, so when we use
 
 
 def about(request):
-    return HttpResponse("<h1> Blog_about </h1>")
+    return render(request, "web_blog/about.html")
 
