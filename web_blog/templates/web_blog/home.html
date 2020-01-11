@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<html>
+{% extends "web_blog/base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {%if title%}
-    <title> Django Blog - {{title}} </title>
-    {%else%}
-    <title>Django Blog</title>
-    {% endif %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-</head>
+{%block content%}
 
-<body>
-    {% for post in posts %}
+{% for post in posts %}
 
-    <h1>{{ post.title }}</h1>
-    <p>By {{ post.author }} on {{ post.date_posted }}</p>
-    <p> {{ post.content }} </p>
+<h1>{{ post.title }}</h1>
+<p>By {{ post.author }} on {{ post.date_posted }}</p>
+<p> {{ post.content }} </p>
 
-    {% endfor %}
-</body>
+{% endfor %}
 
-</html>
+{% endblock content%}
