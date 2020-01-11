@@ -1,2 +1,3 @@
 django-dev
 .vscode
+db.sqlite3
